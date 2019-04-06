@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:onClick="CloseKeyboard"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/Kaydet"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="200dp"
+        android:text="Kaydet"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/Clear"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Telefon" />
+
+    <EditText
+        android:id="@+id/Ad_Saved"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="111dp"
+        android:layout_marginBottom="20dp"
+        android:hint="Adınız"
+        app:layout_constraintBottom_toTopOf="@+id/Soyad_Saved"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Image" />
+
+    <EditText
+        android:id="@+id/Soyad_Saved"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="20dp"
+        android:hint="Soyadınız"
+        app:layout_constraintBottom_toTopOf="@+id/Doğum_yeri"
+        app:layout_constraintEnd_toEndOf="@+id/Ad_Saved"
+        app:layout_constraintStart_toStartOf="@+id/Ad_Saved"
+        app:layout_constraintTop_toBottomOf="@+id/Ad_Saved" />
+
+    <EditText
+        android:id="@+id/Doğum_yeri"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="20dp"
+        android:hint="Doğum Yeriniz"
+        app:layout_constraintBottom_toTopOf="@+id/Doğum_tarihi"
+        app:layout_constraintEnd_toEndOf="@+id/Soyad_Saved"
+        app:layout_constraintStart_toStartOf="@+id/Soyad_Saved"
+        app:layout_constraintTop_toBottomOf="@+id/Soyad_Saved" />
+
+    <EditText
+        android:id="@+id/Doğum_tarihi"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="20dp"
+        android:clickable="true"
+        android:editable="false"
+        android:ems="10"
+        android:hint="Doğum Tarihiniz"
+        android:paddingTop="10dp"
+        android:textAlignment="textStart"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/Telefon"
+        app:layout_constraintEnd_toEndOf="@+id/Doğum_yeri"
+        app:layout_constraintStart_toStartOf="@+id/Doğum_yeri"
+        app:layout_constraintTop_toBottomOf="@+id/Doğum_yeri" />
+
+    <TextView
+        android:id="@+id/Hata"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="50dp"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@android:color/holo_red_dark"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Kaydet" />
+
+    <Button
+        android:id="@+id/Clear"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="50dp"
+        android:text="Clear Form"
+        app:layout_constraintBottom_toTopOf="@+id/Hata"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Kaydet"
+        app:layout_constraintTop_toTopOf="@+id/Kaydet" />
+
+    <EditText
+        android:id="@+id/Telefon"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="8dp"
+        android:editable="true"
+        android:ems="10"
+
+        android:hint="Telefon Numarası"
+        android:inputType="text"
+        android:maxLength="11"
+        app:layout_constraintBottom_toTopOf="@+id/Kaydet"
+        app:layout_constraintEnd_toEndOf="@+id/Doğum_tarihi"
+        app:layout_constraintHorizontal_bias="0.153"
+        app:layout_constraintStart_toStartOf="@+id/Doğum_tarihi"
+        app:layout_constraintTop_toBottomOf="@+id/Doğum_tarihi" />
+
+    <ImageView
+        android:id="@+id/Image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="141dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="142dp"
+        android:layout_marginBottom="20dp"
+        android:onClick="Picture"
+        app:layout_constraintBottom_toTopOf="@+id/Ad_Saved"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
+

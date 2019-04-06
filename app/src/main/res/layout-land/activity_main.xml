@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:onClick="CloseKeyboard"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/Kaydet"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:text="Kaydet"
+        app:layout_constraintStart_toStartOf="@+id/Doğum_yeri"
+        app:layout_constraintTop_toBottomOf="@+id/Doğum_yeri" />
+
+    <EditText
+        android:id="@+id/Ad_Saved"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="50dp"
+        android:hint="Adınız"
+        app:layout_constraintEnd_toStartOf="@+id/Image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/Soyad_Saved"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:hint="Soyadınız"
+        app:layout_constraintEnd_toEndOf="@+id/Ad_Saved"
+        app:layout_constraintStart_toStartOf="@+id/Ad_Saved"
+        app:layout_constraintTop_toBottomOf="@+id/Ad_Saved" />
+
+    <EditText
+        android:id="@+id/Doğum_yeri"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:hint="Doğum Yeriniz"
+        app:layout_constraintEnd_toEndOf="@+id/Soyad_Saved"
+        app:layout_constraintStart_toStartOf="@+id/Soyad_Saved"
+        app:layout_constraintTop_toBottomOf="@+id/Soyad_Saved" />
+
+    <EditText
+        android:id="@+id/Doğum_tarihi"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:clickable="true"
+        android:editable="false"
+        android:ems="10"
+        android:hint="Doğum Tarihiniz"
+        android:paddingTop="10dp"
+        android:textAlignment="textStart"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Image"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/Clear"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:text="Clear Form"
+        app:layout_constraintEnd_toEndOf="@+id/Telefon"
+        app:layout_constraintTop_toTopOf="@+id/Kaydet" />
+
+    <EditText
+        android:id="@+id/Telefon"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+
+        android:layout_marginTop="20dp"
+        android:editable="true"
+        android:ems="10"
+        android:hint="Telefon Numarası"
+        android:inputType="text"
+        android:maxLength="11"
+        app:layout_constraintEnd_toEndOf="@+id/Doğum_tarihi"
+        app:layout_constraintStart_toStartOf="@+id/Doğum_tarihi"
+        app:layout_constraintTop_toBottomOf="@+id/Doğum_tarihi" />
+
+    <ImageView
+        android:id="@+id/Image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="315dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="316dp"
+        android:background="@drawable/unknown"
+        android:onClick="Picture"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars[0]" />
+
+</android.support.constraint.ConstraintLayout>
+
